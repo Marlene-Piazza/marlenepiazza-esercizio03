@@ -1,0 +1,172 @@
+body{
+    max-width: 1000px;
+    margin: auto;
+}
+
+img{
+    max-width: 100%;
+    display: block;
+}
+
+nav{
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1000px;
+    padding: 25px;
+    margin: auto;
+    justify-content: space-between;
+    text-transform: uppercase;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    z-index: 2;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    gap: 32px;    
+}
+
+a{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+.sfondo img{
+    object-fit: cover;
+    height: 100%;
+}
+
+.sfondo{
+    position: relative;
+}
+
+.sfondo:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.text{
+    position: absolute;
+    text-align: center;
+    font-size: 64px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(255, 255, 255);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+h2{
+    margin: 0%;
+    color: black;
+    font-size: 20px;
+    text-align: left;
+    
+}
+
+div.flex{
+    display: flex;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h3{
+    margin: 0%;
+    color: black;
+    font-size: 20px;
+    text-align: left;
+}
+
+h4{
+    margin: 0%;
+    color: black;
+    font-size: 20px;
+    text-align: left;
+}
+
+
+p{
+    text-align: right;
+    
+}
+
+.copertinafigma{
+    position: relative;
+    margin: 0%;
+}
+
+.retrofigma{
+    position: relative;
+}
+.finetesto{
+    position:absolute;
+    bottom: 50%;
+    right: 50%;
+    text-align: right;
+    font-size: 16px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
+}
+
+
+footer{
+    display: flex;
+    text-align: right;
+}
+section{
+    padding: 42px;
+}
+
+@media screen and (max-width: 720px) {
+
+    /* Navigazione: impilare verticalmente il menu */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+    }
+    
+    ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0;
+    }
+
+    /* Riduzione della dimensione del titolo nella sezione .text */
+    .text h1 {
+        font-size: 40px;
+    }
+
+    /* Le sezioni con layout in flex passano a colonna per una migliore leggibilità */
+    .flex {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Allineamento centrale dei testi per una migliore esperienza su mobile */
+    h2, h3, h4, p {
+        text-align: center;
+    }
+
+    /* Ridurre i padding nelle sezioni se necessario */
+    section {
+        padding: 20px;
+    }
+
+    /* Footer: posizione statica per evitare problemi di posizionamento */
+    .finetesto {
+        position: static;
+        margin-top: 10px;
+        text-align: center;
+    }
+}
